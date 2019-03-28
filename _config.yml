@@ -1,0 +1,4 @@
+theme: jekyll-theme-cayman
+title: "Beacon MQTT"
+description: "Simple android application for notifying MQTT server when iBeacon is in range or lost"
+show_downloads: false
