@@ -1,29 +1,40 @@
 # Beacon MQTT
 Simple android application for notifying MQTT server when iBeacon is in range or lost.
 
-Beacon MQTT will be useful for Home Assistant users. It based on AltBeacon and Paho MQTT libraries. It has ugly UI but works perfectly with [MQTT Device Tracker module](https://www.home-assistant.io/components/device_tracker.mqtt/) of my HA.
+Beacon MQTT will be useful for Home Assistant users. It based on AltBeacon and Paho MQTT libraries. It has not so ugly UI but works perfectly with [MQTT Device Tracker module](https://www.home-assistant.io/components/device_tracker.mqtt/) of my HA.
 
 ![combo.png](https://raw.githubusercontent.com/turbo-lab/beacon_mqtt/gh-pages/screenshots/combo.png)
 
 [Main screen](https://raw.githubusercontent.com/turbo-lab/beacon_mqtt/gh-pages/screenshots/1.png)
- | [New beacon](https://raw.githubusercontent.com/turbo-lab/beacon_mqtt/gh-pages/screenshots/1.png)
- | [Delete beacon](https://raw.githubusercontent.com/turbo-lab/beacon_mqtt/gh-pages/screenshots/1.png)
- | [Timing settings](https://raw.githubusercontent.com/turbo-lab/beacon_mqtt/gh-pages/screenshots/1.png)
- | [MQTT settings](https://raw.githubusercontent.com/turbo-lab/beacon_mqtt/gh-pages/screenshots/1.png)
+ | [New beacon](https://raw.githubusercontent.com/turbo-lab/beacon_mqtt/gh-pages/screenshots/2.png)
+ | [Timing settings](https://raw.githubusercontent.com/turbo-lab/beacon_mqtt/gh-pages/screenshots/4.png)
+ | [MQTT settings](https://raw.githubusercontent.com/turbo-lab/beacon_mqtt/gh-pages/screenshots/5.png)
 
 # Download
-You can find latest release of Beacon MQTT on  [github](https://github.com/turbo-lab/android-beacon-mqtt/releases/latest)
+You can find latest release of Beacon MQTT on my  [github page](https://github.com/turbo-lab/android-beacon-mqtt/releases/latest)
 
 # Installation
 Because I don't have Google Play developer account yet you should allow installation of apps from unknown sources.
 
 # Before adding the first beacon
-The detecting process is time critical. You have to disable any application activity restrictions in your android. Without this you will have lots of false beacon losses. It can take some percentage of a battery.
+The detecting process is time critical. You have to disable any application activity restrictions in your android. Without this action you will have lots of false beacon losses.
 
 # Beacons database
-Great! You are ready to add your first beacon. Press "ADD NEW BEACON" and enter Name and IDs of beacon. If you don't know your IDs please use additional android applications. I like [Beacon Scanner](https://play.google.com/store/apps/details?id=com.bridou_n.beaconscanner) from Nicolas Bridoux. For HA users: you should enter the same name as the name of corresponding zone. See [MQTT Device Tracker](https://www.home-assistant.io/components/device_tracker.mqtt/) for more details.
+Great! You are ready to add your first beacon. Press "ADD NEW BEACON" button and wait some time. You will see all beacons in the range. You can differ beacons by the distance. Tap on beacon which you want to add. In dialog write the name of beacon and click save.
 
-To delete the beacon just use long press on it as you running context menu.
+Note for HA users: you should enter the same name as the name of corresponding zone. See [MQTT Device Tracker](https://www.home-assistant.io/components/device_tracker.mqtt/) for more details.
+
+Also you can add beacons that are not in range. Click on plus button of action bar and fill fields manually.
+
+![beacons.png](https://raw.githubusercontent.com/turbo-lab/beacon_mqtt/gh-pages/screenshots/beacons.png)
+
+[Scan in process](https://raw.githubusercontent.com/turbo-lab/beacon_mqtt/gh-pages/screenshots/6.png)
+ | [New beacon](https://raw.githubusercontent.com/turbo-lab/beacon_mqtt/gh-pages/screenshots/2.png)
+ | [Context menu](https://raw.githubusercontent.com/turbo-lab/beacon_mqtt/gh-pages/screenshots/8.png)
+ | [Delete beacon](https://raw.githubusercontent.com/turbo-lab/beacon_mqtt/gh-pages/screenshots/3.png)
+ | [Edit beacon](https://raw.githubusercontent.com/turbo-lab/beacon_mqtt/gh-pages/screenshots/9.png)
+
+To modify or delete the beacon just use long press on it to show context menu.
 
 # Discovery timings
 I suggest next timings:
@@ -47,9 +58,8 @@ To be compatible with [MQTT Device Tracker](https://www.home-assistant.io/compon
 The log screen shows last 1k lines. It helps you with debugging of interaction. You can clear journal by pressing clear button.
 
 # Limitations
-* Only iBeacon is supported
+* Only iBeacon is supported now
 * Just 4 beacons can be added
-* No autofind beacons feature
 * You shouldn't have overlapped beacons
 
 # Known issues
