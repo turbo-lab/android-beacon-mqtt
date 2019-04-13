@@ -1,7 +1,8 @@
 # Beacon MQTT
-Simple android application for notifying MQTT server when iBeacon is in range or lost.
 
-Beacon MQTT will be useful for Home Assistant users. It based on AltBeacon and Paho MQTT libraries. It has not so ugly UI but works perfectly with [MQTT Device Tracker module](https://www.home-assistant.io/components/device_tracker.mqtt/) of my HA.
+Beacon MQTT is the simple android application for notifying MQTT server when iBeacon is in range or lost.
+
+Beacon MQTT will be useful for Home Assistant users and interacts with HA through the [MQTT Device Tracker module](https://www.home-assistant.io/components/device_tracker.mqtt/).
 
 ![combo.png](https://raw.githubusercontent.com/turbo-lab/beacon_mqtt/gh-pages/screenshots/combo.png)
 
@@ -10,11 +11,14 @@ Beacon MQTT will be useful for Home Assistant users. It based on AltBeacon and P
  | [Timing settings](https://raw.githubusercontent.com/turbo-lab/beacon_mqtt/gh-pages/screenshots/4.png)
  | [MQTT settings](https://raw.githubusercontent.com/turbo-lab/beacon_mqtt/gh-pages/screenshots/5.png)
 
-# Download
-You can find latest release of Beacon MQTT on my  [github page](https://github.com/turbo-lab/android-beacon-mqtt/releases/latest)
-
 # Installation
-Because I don't have Google Play developer account yet you should allow installation of apps from unknown sources.
+
+Since v0.2 Beacon MQTT is available on Google play.
+
+<a href="https://play.google.com/store/apps/details?id=org.turbo.beaconmqtt">
+  <img alt="Get it on Google Play"
+       src="https://developer.android.com/images/brand/en_generic_rgb_wo_60.png" />
+</a>
 
 # Before adding the first beacon
 The detecting process is time critical. You have to disable any application activity restrictions in your android. Without this action you will have lots of false beacon losses.
