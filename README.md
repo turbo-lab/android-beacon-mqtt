@@ -1,5 +1,8 @@
 # Beacon MQTT
 
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9C6TJX2SCA3BC&source=url)
+[![Donate](https://img.shields.io/badge/donate-Yandex-green.svg)](https://money.yandex.ru/to/41001690673042)
+
 Beacon MQTT is the simple android application for notifying MQTT server when iBeacon is in range or lost.
 
 Beacon MQTT will be useful for Home Assistant users and interacts with HA through the [MQTT Device Tracker module](https://www.home-assistant.io/components/device_tracker.mqtt/).
@@ -69,7 +72,3 @@ The log screen shows last 1k lines. It helps you with debugging of interaction. 
 # Known issues
 Please visit my [github page](https://github.com/turbo-lab/android-beacon-mqtt/issues) to list known issues. Do not hesitate to open new ones. Thanks in advance for your feedback, guys!
 
-# Donation
-If you like Beacon MQTT you can support project development.
-
- [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9C6TJX2SCA3BC&source=url)
