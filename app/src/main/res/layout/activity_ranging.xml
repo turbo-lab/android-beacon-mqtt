@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SearchingActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list_beacon"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/progress_bar"
+        android:layout_alignParentTop="true"
+        android:scrollbars="vertical" />
+
+    <LinearLayout
+        android:id="@+id/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/image_bluetooth"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:contentDescription="@string/empty"
+                android:tint="@android:color/darker_gray"
+                app:srcCompat="@drawable/ic_bluetooth_beacon_wo_radiation_128dp" />
+
+            <ImageView
+                android:id="@+id/image_radiation"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:contentDescription="@string/empty"
+                android:tint="@android:color/darker_gray"
+                app:srcCompat="@drawable/ic_bluetooth_radiation_128dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="64dp"
+            android:gravity="center_horizontal"
+            android:text="@string/scanning_beacons_title" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="-6dp"
+        android:layout_marginBottom="-6dp"
+        android:indeterminate="true" />
+
+</RelativeLayout>

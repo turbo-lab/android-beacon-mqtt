@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/text_beacon_uuid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/beacon_uuid"
+        android:singleLine="true"
+        app:met_primaryColor="@color/colorAccent"
+        app:met_floatingLabel="normal" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/text_beacon_major"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/beacon_major"
+        android:singleLine="true"
+        app:met_floatingLabel="normal"
+        app:met_primaryColor="@color/colorAccent" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/text_beacon_minor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/beacon_minor"
+        android:singleLine="true"
+        app:met_primaryColor="@color/colorAccent"
+        app:met_floatingLabel="normal" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/text_beacon_mac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/beacon_mac"
+        android:singleLine="true"
+        app:met_primaryColor="@color/colorAccent"
+        app:met_floatingLabel="normal" />
+
+</LinearLayout>

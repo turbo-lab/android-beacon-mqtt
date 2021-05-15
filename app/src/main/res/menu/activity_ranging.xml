@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_add_manual"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_menu_add_beacon_manually"
+        android:title="@string/menu_add_beacon_manually"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_restart_scan"
+        android:orderInCategory="101"
+        android:icon="@drawable/ic_menu_restart_scan"
+        android:title="@string/menu_restart_scan"
+        app:showAsAction="ifRoom"/>
+
+</menu>

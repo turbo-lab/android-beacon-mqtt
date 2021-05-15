@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/text_beacon_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/beacon_name"
+        android:singleLine="true"
+        app:met_primaryColor="@color/colorAccent"
+        app:met_floatingLabel="normal" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/text_beacon_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/beacon_group"
+        android:singleLine="true"
+        app:met_primaryColor="@color/colorAccent"
+        app:met_floatingLabel="normal" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/text_beacon_tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/beacon_tag"
+        android:singleLine="true"
+        app:met_primaryColor="@color/colorAccent"
+        app:met_floatingLabel="normal" />
+
+</LinearLayout>

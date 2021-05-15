@@ -1,0 +1,118 @@
+<!--suppress CheckTagEmptyBody -->
+<resources>
+    <string name="app_name">Beacon MQTT</string>
+    <string name="app_version">%s build %d</string>
+
+    <!-- Strings related to Main Activity -->
+    <string name="menu_add_beacon">Add beacon</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_about">About</string>
+    <string name="beacon_last_seen_format">last seen %s</string>
+    <string name="beacon_last_seen_time_format">%d %s ago</string>
+    <string name="beacon_last_seen_day">day</string>
+    <string name="beacon_last_seen_days">days</string>
+    <string name="beacon_last_seen_hour">hour</string>
+    <string name="beacon_last_seen_hours">hours</string>
+    <string name="beacon_last_seen_minute">min</string>
+    <string name="beacon_last_seen_minutes">mins</string>
+    <string name="beacon_last_seen_just_now">just now</string>
+    <plurals name="beacons_count_limit">
+        <item quantity="one">You can have only %d beacon</item>
+        <item quantity="other">You can have only %d beacons</item>
+    </plurals>
+    <string name="invalid_config">invalid config</string>
+
+    <!-- String related to MqttBroadcaster -->
+    <string name="empty_server_string">Set up your server first!</string>
+
+    <!-- Strings related to Settings -->
+    <string name="pref_header_ble_beacon">Bluetooth beacons settings</string>
+    <string name="pref_header_mqtt_server">MQTT server settings</string>
+    <string name="pref_header_mqtt_templates">MQTT templates</string>
+    <string name="pref_header_interface">Interface settings</string>
+    <string name="pref_header_notification">Notification settings</string>
+    <string name="pref_title_mqtt_beacon_state_topic">Beacon state topic</string>
+    <string name="pref_title_mqtt_beacon_state_message">Beacon state message</string>
+    <string name="pref_title_mqtt_master_topic">Master topic</string>
+    <string name="pref_title_mqtt_master_enter_message">Master enter message</string>
+    <string name="pref_title_mqtt_master_exit_message">Master exit message</string>
+    <string name="pref_title_mqtt_track_topic">Track topic</string>
+    <string name="pref_title_mqtt_track_message">Track message</string>
+    <string name="pref_title_show_log">Show log on main screen</string>
+    <string name="pref_title_notification_vibrate">Vibrate on events</string>
+    <string name="pref_title_beacon_pause_between_scans">Pause between scans in background</string>
+    <string name="pref_message_beacon_pause_between_scans">Time period between scanning cycles. Used when the app is running in the background.\nValid range: 0 &#8230; 55000ms. Default: 8000ms</string>
+    <string name="pref_title_beacon_scan_duration">Scan duration</string>
+    <string name="pref_message_beacon_scan_duration">Time period to scan. Usually set to 3 times beacon’s advertising interval.\nValid range: 500 &#8230; 5000ms. Default: 2000ms</string>
+    <string name="pref_title_beacon_inactive_timeout">Inactive timeout</string>
+    <string name="pref_message_beacon_inactive_timeout">Time to retain current master role. Used when the app is not actively receiving advertising packets. Usually set to half the exit timeout value.\nValid range: 15000 &#8230; 300000ms. Default: 90000ms</string>
+    <string name="pref_title_beacon_exit_timeout">Exit timeout</string>
+    <string name="pref_message_beacon_exit_timeout">Send exit message when the app is not actively receiving advertising packets.\nValid range: 30000 &#8230; 600000ms. Default: 180000ms</string>
+    <string name="pref_title_beacon_hysteresis_factor">Concurrent hysteresis factor</string>
+    <string name="pref_message_beacon_hysteresis_factor">Prevents the flapping of master status between equidistance beacons. To pick up the master role a beacon must be X times closer than the current master beacon.\nValid range: 1.0 &#8230; 5. Default: 1.5</string>
+    <string name="pref_message_invalid_value">The value should be in range of %s</string>
+    <string name="pref_message_static_tokens_description">Tokens available:\n\t• Beacon’s name - %beacon%\n\t• Beacon’s group: - %group%\n\t• Beacon’s tag - %tag%\n\t• Beacon’s state: - %state%\n\t• Phone’s MAC address: - %mac%</string>
+    <string name="pref_message_static_and_dynamic_tokens_description">Tokens available:\n\t• Beacon’s name - %beacon%\n\t• Beacon’s group: - %group%\n\t• Beacon’s tag - %tag%\n\t• Beacon’s state: - %state%\n\t• Phone’s MAC address: - %mac%\n\t• Beacon’s RSSI (dBm) - %rssi%\n\t• Distance to beacon (meters): - %distance%\n</string>
+
+    <!-- Related to Ranging Activity -->
+    <string name="ranging_title">Add beacon</string>>
+    <string name="scanning_beacons_title">New beacons have not been found yet.\n\nYou can add a beacon manually\nby clicking the plus button.</string>
+    <string name="menu_add_beacon_manually">Add beacon manually</string>
+    <string name="menu_restart_scan">Restart scan</string>
+    <string name="unit_m">m</string>
+    <string name="card_text_uuid">UUID • %1$s</string>
+    <string name="card_text_major">Major • %1$s</string>
+    <string name="card_text_minor">Minor • %1$s</string>
+
+    <!-- Related to About Activity -->
+    <string name="about_title">About Beacon MQTT</string>>
+    <string name="homepage_text">The documentation, typical usecases, list of known issues are available on a &lt;a href=https://turbo-lab.github.io/android-beacon-mqtt/>project\'s homepage&lt;/a>.</string>
+    <string name="google_play">Like this app? Rate it in &lt;a href=market://details?id=org.turbo.beaconmqtt>Google Play&lt;/a>.</string>
+    <string name="feedback">Feedback</string>
+    <string name="acknowledgments">Acknowledgments</string>
+    <string name="acknowledgments_text">Many thanks to Simon Bunn, Ronald Dehuysser, Cyn, Philip and others who helped me make Beacon MQTT better.</string>
+    <string name="homepage">Homepage</string>
+    <string name="description_text">Beacon MQTT is the simple Android app for presence detection of a person. Beacons have a known location. When an app detects or loses a beacon, it sends a MQTT message to home automation system.\n\nPlease, note the beacon detection is a time critical process. You have to disable any activity restrictions for Beacon MQTT in your Android. Without this you will have lots of false beacon losses.</string>
+    <string name="version_text">Version %s build %d</string>
+
+    <!-- Related to beacon dialogs -->
+    <string name="type_of_beacon">Type of beacon</string>
+    <string name="base_beacon_parameters">Basic parameters</string>
+    <string name="advanced_parameters">Advanced parameters</string>
+    <string name="beacon_name">Beacon\'s name</string>
+    <string name="beacon_group">Beacon\'s group</string>
+    <string name="beacon_tag">Beacon\'s tag</string>
+    <string name="beacon_mac">Beacon\'s MAC address, optional</string>
+    <string name="beacon_uuid">Beacon\'s UUID</string>
+    <string name="beacon_major">Beacon\'s major</string>
+    <string name="beacon_minor">Beacon\'s minor</string>
+    <string name="beacon_ssid">Beacon\'s SSID</string>
+    <string name="save">Save</string>
+    <string name="advanced">Advanced</string>
+    <string name="next">Next</string>
+    <string name="back">Back</string>
+    <string name="cancel">Cancel</string>
+    <string name="error">Error</string>
+    <string name="warning">Warning</string>
+    <string name="beacon_is_already_exists">Beacon %1$s is already exists!</string>
+    <string name="beacon_with_the_same_parameters_already_exists">Beacon %1$s with the same parameters is already exists!</string>
+    <string name="close">Close</string>
+    <string name="are_you_sure_to_delete">Are you sure to delete %1$s beacon?</string>
+    <string name="delete">Delete</string>
+    <string name="invalid_value">invalid value</string>
+    <string name="preferences_revision_changed">The application has been updated to version %1$s. There are some breaking changes. Not all settings can be converted automatically. \n\nPlease check on your settings.</string>
+    <string name="coarse_location_access">This app needs location access</string>
+    <string name="grant_coarse_location_access">Please grant location access so this app can detect beacons in the background.</string>
+    <string name="coarse_location_access_failed">Since location access has not been granted, this app will not be able to discover beacons when in the background.</string>
+    <string name="bluetooth_disabled">Please enable bluetooth in settings and restart this application.</string>
+    <string name="bluetooth_not_available">Sorry, this device does not support Bluetooth LE.</string>
+
+    <!-- Related to beacon's context menu -->
+    <string name="edit_beacon">Edit beacon</string>
+    <string name="delete_beacon">Delete beacon</string>
+
+    <!-- New -->
+
+    <string name="empty"></string>
+
+</resources>

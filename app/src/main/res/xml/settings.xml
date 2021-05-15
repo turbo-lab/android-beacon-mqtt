@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/pref_header_ble_beacon"
+        android:key="beacon_settings">
+
+        <EditTextPreference
+            android:defaultValue="2000"
+            android:dialogMessage="@string/pref_message_beacon_scan_duration"
+            android:inputType="number"
+            android:key="beacon_scan_duration"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:title="@string/pref_title_beacon_scan_duration" />
+
+        <EditTextPreference
+            android:defaultValue="8000"
+            android:dialogMessage="@string/pref_message_beacon_pause_between_scans"
+            android:inputType="number"
+			android:key="beacon_pause_between_scans"
+			android:maxLines="1"
+			android:singleLine="true"
+			android:title="@string/pref_title_beacon_pause_between_scans" />
+
+        <EditTextPreference
+            android:defaultValue="90000"
+            android:dialogMessage="@string/pref_message_beacon_inactive_timeout"
+            android:inputType="number"
+            android:key="beacon_inactive_timeout"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:title="@string/pref_title_beacon_inactive_timeout" />
+
+		<EditTextPreference
+            android:defaultValue="180000"
+            android:dialogMessage="@string/pref_message_beacon_exit_timeout"
+            android:inputType="number"
+			android:key="beacon_exit_timeout"
+			android:maxLines="1"
+			android:singleLine="true"
+			android:title="@string/pref_title_beacon_exit_timeout" />
+
+        <EditTextPreference
+            android:defaultValue="1.5"
+            android:dialogMessage="@string/pref_message_beacon_hysteresis_factor"
+            android:inputType="number|numberDecimal"
+            android:key="beacon_hysteresis_factor"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:title="@string/pref_title_beacon_hysteresis_factor" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/pref_header_mqtt_server"
+        android:key="mqtt_settings">
+
+        <EditTextPreference
+            android:inputType="textUri"
+            android:key="mqtt_server"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Server" />
+
+        <EditTextPreference
+            android:inputType="number"
+            android:defaultValue="1883"
+            android:key="mqtt_port"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Port" />
+
+        <EditTextPreference
+            android:inputType="text"
+            android:key="mqtt_user"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="User" />
+
+
+        <EditTextPreference
+            android:inputType="textVisiblePassword"
+            android:key="mqtt_pass"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Password" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/pref_header_mqtt_templates"
+        android:key="mqtt_settings">
+
+        <EditTextPreference
+            android:inputType="text"
+            android:key="mqtt_beacon_state_topic"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:dialogMessage="@string/pref_message_static_tokens_description"
+            android:title="@string/pref_title_mqtt_beacon_state_topic" />
+
+        <EditTextPreference
+            android:dependency="mqtt_beacon_state_topic"
+            android:dialogMessage="@string/pref_message_static_tokens_description"
+            android:inputType="textMultiLine"
+            android:key="mqtt_beacon_state_message"
+            android:maxLines="5"
+            android:scrollbars="vertical"
+            android:title="@string/pref_title_mqtt_beacon_state_message" />
+
+        <EditTextPreference
+            android:inputType="text"
+            android:key="mqtt_master_topic"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:dialogMessage="@string/pref_message_static_tokens_description"
+            android:title="@string/pref_title_mqtt_master_topic" />
+
+        <EditTextPreference
+            android:dependency="mqtt_master_topic"
+            android:dialogMessage="@string/pref_message_static_tokens_description"
+            android:inputType="textMultiLine"
+            android:key="mqtt_master_enter_message"
+            android:maxLines="5"
+            android:scrollbars="vertical"
+            android:title="@string/pref_title_mqtt_master_enter_message" />
+
+        <EditTextPreference
+            android:dependency="mqtt_master_topic"
+            android:dialogMessage="@string/pref_message_static_tokens_description"
+            android:inputType="textMultiLine"
+            android:key="mqtt_master_exit_message"
+            android:maxLines="5"
+            android:scrollbars="vertical"
+            android:title="@string/pref_title_mqtt_master_exit_message" />
+
+        <EditTextPreference
+            android:inputType="text"
+            android:key="mqtt_track_topic"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:dialogMessage="@string/pref_message_static_tokens_description"
+            android:title="@string/pref_title_mqtt_track_topic" />
+
+        <EditTextPreference
+            android:dependency="mqtt_track_topic"
+            android:dialogMessage="@string/pref_message_static_and_dynamic_tokens_description"
+            android:inputType="textMultiLine"
+            android:key="mqtt_track_message"
+            android:maxLines="5"
+            android:scrollbars="vertical"
+            android:title="@string/pref_title_mqtt_track_message" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/pref_header_interface"
+        android:key="interface_settings">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="show_log"
+            android:title="@string/pref_title_show_log" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/pref_header_notification"
+        android:key="notifications_settings">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="notification_vibrate_on_events"
+            android:title="@string/pref_title_notification_vibrate" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
