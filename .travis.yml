@@ -1,0 +1,30 @@
+language: android
+android:
+  components:
+  - build-tools-30.0.2
+  - android-30
+before_install:
+- touch $HOME/.android/repositories.cfg
+- yes | sdkmanager "platforms;android-30"
+- yes | sdkmanager "build-tools;30.0.2"
+script:
+- "./gradlew assembleRelease"
+branches:
+  only:
+  - master
+  - /^v\d+\.\d+\.\d+.*$/
+deploy:
+  provider: releases
+  api_key:
+    secure: lY9tEIiHiUm2+IvQ2ArCSlLu4tdaQNAd7zyLDNmxiQlpJZA/tx/t7y0hDyioefiXyE0XzBmGCFPj9QUmjRbQInOPqNgUmCvxeL6+t8WTGTMDtX7GpWVt4Wrbm72J4EKinNtAf1w9JVLm4b0odCiq8UimUJOxU6Sny+E/0Wsy/s8T7c16fBmZxeg0FU1BmE0h73QDVFADuMjgmdrKWNk+lhK5zyBoqJhErSsT1GWLiUXEFK5WSGz8hyXQWGjVrM05U45AhlTUjDWArtJL4Px73iS+NoInmyIY9FEVSDfP3jJzTVUJJUv8oe89vomKTLqhAn+FLzutmaC2J4pOcgKREcG8pg7Aa8+1S1scfxY9Ii/6K+zeixwqurJ0fBIRDgS2rMG1iDzbyUzrA/h6wJe0cCB81hT8lGBQlzuByNB7UgqsO2u2xSfDFXfKUxO0+iSJSe4v0LYUe06FT9dSScwtkjxNk6sUb9wNh4fqKm7rfQcrl3nvqAl12vG5lo7gW26UXWYrDwH0qFlxSA/7Q2UQlE2i5CBZQCpeUtUeCJQCL/A0E22SKG/MMzK9g+XHykvD33Ij1z2nqbz2R1ylO76vY7NzyYbpGTxE1jZcLvnJ18O2GxVaN3tjnfVPQL3zTlHgFmcSr+DOcAJ2kw5xG6mWXvape3YW0sp7ZU45oeWYUdA=
+  file:
+    - app/build/outputs/apk/release/beacon-mqtt*.apk
+    - app/build/outputs/mapping/release/mapping.txt
+  file_glob: true
+  on:
+    repo: turbo-lab/android-beacon-mqtt
+    branch: master
+    tags: true
+  skip_cleanup: true
+  overwrite: true
+
