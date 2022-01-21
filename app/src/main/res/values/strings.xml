@@ -101,8 +101,8 @@
     <string name="delete">Delete</string>
     <string name="invalid_value">invalid value</string>
     <string name="preferences_revision_changed">The application has been updated to version %1$s. There are some breaking changes. Not all settings can be converted automatically. \n\nPlease check on your settings.</string>
-    <string name="coarse_location_access">This app needs location access</string>
-    <string name="grant_coarse_location_access">Please grant location access so this app can detect beacons in the background.</string>
+    <string name="coarse_location_access">Please grant location access</string>
+    <string name="grant_coarse_location_access">This app needs location access to be able to detect BLE beacons in the background and send this information to your MQTT server.\n\nRest assured, the application does not store location information and does not share it with third parties.</string>
     <string name="coarse_location_access_failed">Since location access has not been granted, this app will not be able to discover beacons when in the background.</string>
     <string name="bluetooth_disabled">Please enable bluetooth in settings and restart this application.</string>
     <string name="bluetooth_not_available">Sorry, this device does not support Bluetooth LE.</string>
