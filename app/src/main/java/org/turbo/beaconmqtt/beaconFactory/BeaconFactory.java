@@ -314,10 +314,6 @@ public class BeaconFactory implements BootstrapNotifier, WifiChangeListener {
     }
 
     public int getMaximumSize() {
-        if (BuildConfig.PRO) {
-            return BEACON_LIST_SIZE_PRO;
-        }
-
         if (BuildConfig.DEBUG) {
             return BEACON_LIST_SIZE_PRO;
         }
