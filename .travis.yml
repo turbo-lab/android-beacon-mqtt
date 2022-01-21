@@ -11,7 +11,6 @@ script:
 - "./gradlew assembleRelease"
 branches:
   only:
-  - master
   - /^v\d+\.\d+\.\d+.*$/
 deploy:
   provider: releases
