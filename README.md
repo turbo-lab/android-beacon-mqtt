@@ -72,3 +72,10 @@ The log screen shows last 1k lines. It helps you with debugging of interaction. 
 # Known issues
 Please visit my [github page](https://github.com/turbo-lab/android-beacon-mqtt/issues) to list known issues. Do not hesitate to open new ones. Thanks in advance for your feedback, guys!
 
+# Privacy Policy
+
+* The app collects information about BLE beacons around your phone. Let's call it location data.
+* The app doesn’t store location data
+* The app doesn’t forward location data to third parties
+* The location data (like name, mac address, UUIDs, RSSI of beacons) forwards to your MQTT server only
+* MQTT server settings are stored in app's secure area and used to establish link to your server only
