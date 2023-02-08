@@ -70,8 +70,8 @@ public final class IBeacon extends BaseBleBeacon {
     public boolean isValid() {
         boolean isValid = super.isValid();
         isValid &= Helper.validateUuid(iBeaconData.mUuid);
-        isValid &= Helper.validateInt(iBeaconData.mMajor, 1, 65535);
-        isValid &= Helper.validateInt(iBeaconData.mMinor, 1, 65535);
+        isValid &= Helper.validateInt(iBeaconData.mMajor, 0, 65535);
+        isValid &= Helper.validateInt(iBeaconData.mMinor, 0, 65535);
         isValid &= Helper.validateMacAddress(mBluetoothAddress);
         return isValid;
     }
